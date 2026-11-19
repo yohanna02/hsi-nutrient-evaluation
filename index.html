@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyperspectral Imaging System for Non-destructive Nutrient Evaluation — ATBU · TETFund 2026</title>
+<meta name="description" content="A cabinet-based VIS–NIR hyperspectral imaging (HSI) system for non-destructive evaluation of nutrients in food and agricultural products. Developed at Abubakar Tafawa Balewa University and presented at the 2026 TETFund National Research Fair/Exhibition.">
+<meta name="author" content="Abdulwahab Durojaiye Ismail">
+<meta name="theme-color" content="#0f7a52">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hyperspectral Imaging System for Non-destructive Nutrient Evaluation">
+<meta property="og:description" content="Reading the nutrient composition of yam, potatoes, beans, rice and other foods from the light they reflect — without destroying the sample. ATBU · 2026 TETFund National Research Fair.">
+<meta property="og:image" content="assets/img/cabinet-annotated.png">
+<link rel="icon" href="assets/img/atbu-crest.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  /* Apply a saved theme before first paint to avoid a flash. */
+  try {
+    var t = localStorage.getItem('hsi-theme');
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <img src="assets/img/atbu-crest.png" alt="" width="28" height="28">
+      <span class="brand-text">
+        <b>HSI Nutrient Scanner</b>
+        <span>ATBU · TETFund 2026</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#overview">Overview</a>
+      <a href="#demo">Video</a>
+      <a href="#instrument">Instrument</a>
+      <a href="#samples">Samples</a>
+      <a href="#results">Results</a>
+      <a href="#uses">Uses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="icon-btn" id="themeToggle" aria-label="Switch to dark theme" title="Switch theme">◐</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="hero-badge">2026 TETFund National Research Fair / Exhibition</p>
+      <h1>Reading the nutrients in food — without destroying it</h1>
+      <p class="lede">
+        A cabinet-sized scanner that measures protein, carbohydrate, minerals and vitamins from the
+        light a food reflects. No grinding, no reagents, no laboratory digestion: the sample stays
+        whole and edible.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#demo">▶ Watch it work</a>
+        <a class="btn btn-ghost" href="#results">See the results</a>
+      </div>
+
+      <figure class="hero-figure">
+        <button class="zoomable" data-full="assets/img/cabinet-annotated.png"
+                data-caption="The HSI cabinet with its door open, showing the internal arrangement of the camera, illumination, motion stage and control hardware.">
+          <img src="assets/img/cabinet-annotated.png" width="661" height="422"
+               alt="Labelled cut-away rendering of the hyperspectral imaging cabinet, showing the hyperspectral camera, light sources, stepper motor, linear transitional stage, moveable platform, power pack, LCD calibration panel and pattress box.">
+        </button>
+        <figcaption>The instrument, with its parts labelled. Tap to enlarge.</figcaption>
+      </figure>
+
+      <p class="hero-title">
+        <b>Project title.</b> Hyperspectral Imaging (HSI) System for Non-destructive Evaluation of
+        Nutrients in Food and Agricultural Products.
+      </p>
+
+      <div class="byline">
+        <strong>Abdulwahab Durojaiye Ismail</strong>
+        Department of Agricultural and Bioresources Engineering,<br>
+        Faculty of Engineering and Engineering Technology,<br>
+        Abubakar Tafawa Balewa University, Bauchi State, Nigeria.
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <p class="stat-label">Spectral range</p>
+          <p class="stat-value">400–1000 <small>nm</small></p>
+          <p class="stat-note">Visible to near-infrared</p>
+        </div>
+        <div class="stat">
+          <p class="stat-label">Nutrient targets</p>
+          <p class="stat-value">10</p>
+          <p class="stat-note">Validated against lab assays</p>
+        </div>
+        <div class="stat">
+          <p class="stat-label">Best model fit</p>
+          <p class="stat-value">R² 0.995</p>
+          <p class="stat-note">Irish potato carbohydrate</p>
+        </div>
+        <div class="stat">
+          <p class="stat-label">Scan pairs shown</p>
+          <p class="stat-value">8</p>
+          <p class="stat-note">Five everyday Nigerian foods</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OVERVIEW ================= -->
+  <section id="overview">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Overview</p>
+        <h2>The idea in one minute</h2>
+      </div>
+
+      <div class="compare">
+        <div class="compare-col">
+          <h3>Conventional assay</h3>
+          <p>Grind the sample, digest it in acid, run reagents and spectrometry. Accurate — but the portion tested is destroyed.</p>
+        </div>
+        <div class="compare-col is-new">
+          <h3>This system</h3>
+          <p>Shine stable light on the whole sample and record its reflectance spectrum. The food is untouched and can still be sold, planted or eaten.</p>
+        </div>
+      </div>
+
+      <ol class="steps steps-3">
+        <li>
+          <div>
+            <h3>Scan</h3>
+            <p>The sample moves through a sealed cabinet while the camera records a full spectrum at every pixel — not just red, green and blue.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Predict</h3>
+            <p>Bonds in water, starch, protein and fat absorb at known wavelengths. Models trained on laboratory assays turn those fingerprints into concentrations.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Map</h3>
+            <p>Because every pixel carries a spectrum, the answer is drawn back onto the sample as a map — not one averaged number for a whole batch.</p>
+          </div>
+        </li>
+      </ol>
+
+      <details class="more">
+        <summary>Why this matters <span class="more-hint">the longer version</span></summary>
+        <div class="more-body">
+          <p>
+            Reference methods for food composition need reagents, laboratory infrastructure and trained
+            analysts, and they return a single figure for a homogenised batch. That figure hides the
+            variation between individual tubers, grains or plates — which is exactly the variation a
+            grader, breeder or quality officer needs to see.
+          </p>
+          <p>
+            A hyperspectral camera instead records a three-dimensional <em>hypercube</em>: two spatial
+            axes describing the sample, and a third axis of wavelength running from 400 to 1000&nbsp;nm.
+            Composition leaves a fingerprint in that spectrum, so the same measurement can be repeated
+            on many individual items, quickly and at low marginal cost.
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= DEMO VIDEO ================= -->
+  <section id="demo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Video</p>
+        <h2>The instrument, running</h2>
+        <p class="lede">
+          Two minutes at the bench: the cabinet interior, a sample on the moving stage, and the
+          touchscreen being used to choose an analysis and read out predicted values.
+        </p>
+      </div>
+
+      <div class="demo-grid">
+        <figure class="video-card">
+          <video id="demoVideo" controls playsinline preload="none"
+                 poster="assets/video/instrument-demo-poster.jpg"
+                 width="360" height="640">
+            <source src="assets/video/instrument-demo.mp4" type="video/mp4">
+            <p>
+              Your browser cannot play this video.
+              <a href="assets/video/instrument-demo.mp4">Download it instead</a> (MP4, 7.5&nbsp;MB).
+            </p>
+          </video>
+          <figcaption>
+            Walkthrough of the working system. 1 min 59 s · sound on ·
+            <a href="assets/video/instrument-demo.mp4" download>download</a>
+          </figcaption>
+        </figure>
+
+        <div class="demo-notes">
+          <h3>What the screen is doing</h3>
+          <p class="small muted">
+            The cabinet carries a Raspberry Pi touchscreen running an app called
+            <b>Hyperspectral Remote Display</b>, with two tabs: <b>Selection</b> and <b>Results</b>.
+          </p>
+          <ol class="steps steps-3">
+            <li>
+              <div>
+                <h3>Pick a system</h3>
+                <p>Proximate, Mineral or Vitamins — each one loads its own set of calibrated models.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Pick the food</h3>
+                <p>Seven modes: yam, plantain, chicken, beans, jollof, beef and potato.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Read the result</h3>
+                <p>Predicted values appear on the Results tab in the assay's own units — percent for proximate, mg/kg for minerals.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INSTRUMENT ================= -->
+  <section id="instrument">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Instrument</p>
+        <h2>A sealed cabinet, a moving stage, one line of light at a time</h2>
+        <p class="lede">
+          Illumination, geometry and sample position are fixed inside the enclosure so that every scan
+          is repeatable — the precondition for comparing a spectral reading against a laboratory value.
+        </p>
+      </div>
+
+      <figure class="figure-card figure-wide">
+        <button class="zoomable" data-full="assets/img/cabinet-closed.png"
+                data-caption="The HSI cabinet closed, with the LCD calibration panel set into the door.">
+          <img src="assets/img/cabinet-closed.png" width="399" height="550"
+               alt="Rendering of the closed hyperspectral imaging cabinet: a tall grey enclosure with a hinged door, a handle and an LCD calibration screen set into the upper door.">
+        </button>
+        <figcaption>The closed enclosure, with the touchscreen set into the door.</figcaption>
+      </figure>
+
+      <ol class="steps steps-6">
+        <li>
+          <div>
+            <h3>Illuminate</h3>
+            <p>The sealed cabinet is flooded with stable broadband VIS–NIR light, so the only thing changing between scans is the sample.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Translate</h3>
+            <p>A stepper motor advances the linear stage, sweeping the platform — and the food on it — beneath the camera at a controlled rate.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Capture a line</h3>
+            <p>At each position the camera records one spatial line, with a full reflectance spectrum for every pixel along it.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Stack the hypercube</h3>
+            <p>Successive lines are assembled into the data cube: two spatial dimensions plus wavelength, covering 400–1000&nbsp;nm.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Calibrate and predict</h3>
+            <p>Reference calibration removes illumination and sensor effects. Chemometric regression — including gradient-boosted trees (LightGBM) — maps spectra to concentrations learned from paired laboratory assays.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Map and report</h3>
+            <p>Predictions are rendered back onto the sample as a spatial–spectral map, alongside fit statistics: R², adjusted R², RMSE and MAE.</p>
+          </div>
+        </li>
+      </ol>
+
+      <details class="more">
+        <summary>Components inside the cabinet <span class="more-hint">10 parts</span></summary>
+        <div class="more-body">
+          <ul class="parts">
+            <li><b>HSI cabinet</b><span>Light-tight enclosure that fixes the camera–sample geometry and excludes ambient light.</span></li>
+            <li><b>Hyperspectral camera</b><span>Line-scan sensor above the stage; disperses each spatial line into its component wavelengths.</span></li>
+            <li><b>Light source</b><span>Broadband lamps around the optical axis for even VIS–NIR illumination across the field of view.</span></li>
+            <li><b>Stepper motor</b><span>Drives the stage in discrete, repeatable increments so scan lines are evenly spaced.</span></li>
+            <li><b>Linear transitional stage</b><span>The translation axis carrying the sample through the camera's field of view.</span></li>
+            <li><b>Moveable platform</b><span>The sample tray, positioned on the stage under the lens.</span></li>
+            <li><b>Power pack</b><span>Regulated supply for camera, lamps, motor driver and control electronics.</span></li>
+            <li><b>LCD calibration panel</b><span>Door-mounted touchscreen used for calibration, acquisition control and read-out.</span></li>
+            <li><b>Pattress box</b><span>Houses the wiring and control electronics inside the enclosure.</span></li>
+            <li><b>Handle &amp; door</b><span>Sealed access for loading samples and servicing the optics.</span></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="more">
+        <summary>Operating the touchscreen <span class="more-hint">as shown in the video</span></summary>
+        <div class="more-body">
+          <div class="grid-2">
+            <div>
+              <h3>Selection tab</h3>
+              <ul class="parts parts-plain">
+                <li><b>System</b><span>1 Proximate · 2 Mineral · 3 Vitamins</span></li>
+                <li><b>Mode</b><span>1 Yam · 2 Plantain · 3 Chicken · 4 Beans · 5 Jollof · 6 Beef · 7 Potato</span></li>
+                <li><b>Server URL</b><span>Address of the inference service the display talks to over the local network.</span></li>
+                <li><b>Refresh / Saved</b><span>Reload the model list, or switch between saved and live captures.</span></li>
+                <li><b>Load Cal / Live</b><span>Load a reference calibration, then take a live reading.</span></li>
+                <li><b>Samples</b><span>“Choose a saved .tif sample to capture. Live capture ignores this list.”</span></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Results tab</h3>
+              <p>
+                Predicted values are listed for the chosen system and mode, each in the units of its
+                reference assay: moisture, protein, lipid, fibre, ash, carbohydrate and energy
+                (kcal) for proximate analysis; Na, K, Fe, Ca and Se in mg/kg for minerals.
+              </p>
+              <p>
+                The status line reports which saved capture was restored — for example
+                “Restored .tif: Low Fried plantain” — so a reading can always be traced back to the
+                scan it came from.
+              </p>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= SAMPLES ================= -->
+  <section id="samples">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Samples</p>
+        <h2>Everyday Nigerian foods, scanned whole</h2>
+        <p class="lede">
+          Each sample was photographed with an ordinary RGB camera, then scanned in the cabinet.
+          Every card shows the photograph above the hyperspectral result.
+        </p>
+      </div>
+
+      <div class="chips" id="filters" role="group" aria-label="Filter samples by food">
+        <button class="chip" data-filter="all" aria-pressed="true">All <span class="count">8</span></button>
+        <button class="chip" data-filter="yam" aria-pressed="false">Yam <span class="count">3</span></button>
+        <button class="chip" data-filter="potato" aria-pressed="false">Potato <span class="count">1</span></button>
+        <button class="chip" data-filter="beans" aria-pressed="false">Beans <span class="count">2</span></button>
+        <button class="chip" data-filter="plantain" aria-pressed="false">Plantain <span class="count">1</span></button>
+        <button class="chip" data-filter="rice" aria-pressed="false">Jollof rice <span class="count">1</span></button>
+      </div>
+
+      <div class="gallery" id="gallery">
+
+        <article class="card scan" data-food="yam">
+          <div class="scan-head"><h3>Yam — wedge cut</h3></div>
+          <div class="scan-rgb">
+            <button class="zoomable" data-full="assets/img/samples/yam-wedge-rgb.jpg" data-caption="Yam wedge under the RGB camera, on the moveable platform.">
+              <img src="assets/img/samples/yam-wedge-rgb.jpg" loading="lazy" alt="A single triangular wedge of white yam resting on the circular sample platform under the RGB camera.">
+            </button>
+          </div>
+          <div class="scan-hsi">
+            <p class="scan-label">Hyperspectral result</p>
+            <button class="zoomable" data-full="assets/img/samples/yam-wedge-hsi.png" data-caption="Yam wedge under the HSI camera — reconstructed image and spectral map.">
+              <img src="assets/img/samples/yam-wedge-hsi.png" loading="lazy" alt="Hyperspectral scan strip of the yam wedge: reconstructed image at left, false-colour spectral map at right showing the wedge in blue against a warm background.">
+            </button>
+          </div>
+        </article>
+
+        <article class="card scan" data-food="yam">
+          <div class="scan-head"><h3>Yam — three slices</h3></div>
+          <div class="scan-rgb">
+            <button class="zoomable" data-full="assets/img/samples/yam-slices-rgb.jpg" data-caption="Three yam slices on the glass sample plate under the RGB camera.">
+              <img src="assets/img/samples/yam-slices-rgb.jpg" loading="lazy" alt="Three elongated slices of yam arranged on a round glass plate on the sample stage.">
+            </button>
+          </div>
+          <div class="scan-hsi">
+            <p class="scan-label">Hyperspectral result</p>
+            <button class="zoomable" data-full="assets/img/samples/yam-slices-hsi.png" data-caption="Yam slices under the HSI camera — reconstructed image and spectral map.">
+              <img src="assets/img/samples/yam-slices-hsi.png" loading="lazy" alt="Hyperspectral scan strip of the three yam slices, with the reconstructed image at left and the false-colour spectral map at right.">
+            </button>
+          </div>
+        </article>
+
+        <article class="card scan" data-food="yam">
+          <div class="scan-head"><h3>Yam — disc cut</h3></div>
+          <div class="scan-rgb">
+            <button class="zoomable" data-full="assets/img/samples/yam-disc-rgb.jpg" data-caption="A circular disc of yam on the platform under the RGB camera.">
+              <img src="assets/img/samples/yam-disc-rgb.jpg" loading="lazy" alt="A round disc cut from white yam, lit on the sample platform under the RGB camera.">
+            </button>
+          </div>
+          <div class="scan-hsi">
+            <p class="scan-label">Hyperspectral result</p>
+            <button class="zoomable" data-full="assets/img/samples/yam-disc-hsi.png" data-caption="Yam disc under the HSI camera — reconstructed image and spectral map.">
+              <img src="assets/img/samples/yam-disc-hsi.png" loading="lazy" alt="Hyperspectral scan strip of the yam disc: reconstructed image at left, spectral map at right with the disc reading cool blue against warm surroundings.">
+            </button>
+          </div>
+        </article>
+
+        <article class="card scan" data-food="potato">
+          <div class="scan-head"><h3>Irish potatoes</h3></div>
+          <div class="scan-rgb">
+            <button class="zoomable" data-full="assets/img/samples/irish-potato-rgb.jpg" data-caption="Two Irish potato wedges on the glass plate under the RGB camera.">
+              <img src="assets/img/samples/irish-potato-rgb.jpg" loading="lazy" alt="Two pale yellow wedges of Irish potato on a round glass plate on the sample stage.">
+            </button>
+          </div>
+          <div class="scan-hsi">
+            <p class="scan-label">Hyperspectral result</p>
+            <button class="zoomable" data-full="assets/img/samples/irish-potato-hsi.png" data-caption="Irish potatoes under the HSI camera — reconstructed image and spectral map.">
+              <img src="assets/img/samples/irish-potato-hsi.png" loading="lazy" alt="Hyperspectral scan strip of the Irish potato wedges, reconstructed image at left and spectral map at right.">
+            </button>
+          </div>
+        </article>
+
+        <article class="card scan" data-food="beans">
+          <div class="scan-head"><h3>PBR beans — plated</h3></div>
+          <div class="scan-rgb">
+            <button class="zoomable" data-full="assets/img/samples/beans-plate-rgb.jpg" data-caption="PBR beans spread on the glass sample plate under the RGB camera.">
+              <img src="assets/img/samples/beans-plate-rgb.jpg" loading="lazy" alt="A scatter of pale cooked beans with dark hilums spread across a round glass plate on the sample stage.">
+            </button>
+          </div>
+          <div class="scan-hsi">
+            <p class="scan-label">Hyperspectral result</p>
+            <button class="zoomable" data-full="assets/img/samples/beans-plate-hsi.png" data-caption="PBR beans under the HSI camera — reconstructed image and spectral map.">
+              <img src="assets/img/samples/beans-plate-hsi.png" loading="lazy" alt="Hyperspectral scan strip of the plated beans: reconstructed image at left, spectral map at right resolving individual beans in cool blue.">
+            </button>
+          </div>
+        </article>
+
+        <article class="card scan" data-food="beans">
+          <div class="scan-head"><h3>PBR beans — on stage</h3></div>
+          <div class="scan-rgb">
+            <button class="zoomable" data-full="assets/img/samples/beans-stage-rgb.jpg" data-caption="PBR beans arranged directly on the moveable platform under the RGB camera.">
+              <img src="assets/img/samples/beans-stage-rgb.jpg" loading="lazy" alt="Cooked beans arranged in a cluster directly on the platform surface, beside the stage drive mechanism.">
+            </button>
+          </div>
+          <div class="scan-hsi">
+            <p class="scan-label">Hyperspectral result</p>
+            <button class="zoomable" data-full="assets/img/samples/beans-stage-hsi.png" data-caption="PBR beans on the stage under the HSI camera — reconstructed image and spectral map.">
+              <img src="assets/img/samples/beans-stage-hsi.png" loading="lazy" alt="Hyperspectral scan strip of beans on the stage, reconstructed image at left and spectral map at right.">
+            </button>
+          </div>
+        </article>
+
+        <article class="card scan" data-food="plantain">
+          <div class="scan-head"><h3>Fried plantain</h3></div>
+          <div class="scan-rgb">
+            <button class="zoomable" data-full="assets/img/samples/plantain-rgb.jpg" data-caption="A slice of fried plantain on the glass plate under the RGB camera.">
+              <img src="assets/img/samples/plantain-rgb.jpg" loading="lazy" alt="A single golden-brown slice of fried plantain on a round glass plate on the sample stage.">
+            </button>
+          </div>
+          <div class="scan-hsi">
+            <p class="scan-label">Hyperspectral result</p>
+            <button class="zoomable" data-full="assets/img/samples/plantain-hsi.png" data-caption="Fried plantain under the HSI camera — reconstructed image and spectral map.">
+              <img src="assets/img/samples/plantain-hsi.png" loading="lazy" alt="Hyperspectral scan strip of the fried plantain slice, reconstructed image at left and spectral map at right.">
+            </button>
+          </div>
+        </article>
+
+        <article class="card scan" data-food="rice">
+          <div class="scan-head"><h3>Jollof rice</h3></div>
+          <div class="scan-rgb">
+            <button class="zoomable" data-full="assets/img/samples/jollof-rice-rgb.jpg" data-caption="A portion of jollof rice on the glass plate under the RGB camera.">
+              <img src="assets/img/samples/jollof-rice-rgb.jpg" loading="lazy" alt="A portion of orange-red jollof rice grains spread on a round glass plate on the sample stage.">
+            </button>
+          </div>
+          <div class="scan-hsi">
+            <p class="scan-label">Hyperspectral result</p>
+            <button class="zoomable" data-full="assets/img/samples/jollof-rice-hsi.png" data-caption="Jollof rice under the HSI camera — reconstructed image and spectral map.">
+              <img src="assets/img/samples/jollof-rice-hsi.png" loading="lazy" alt="Hyperspectral scan strip of jollof rice: reconstructed image at left, granular spectral map at right.">
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <details class="more">
+        <summary>How to read these strips</summary>
+        <div class="more-body">
+          <p>
+            The left half is the image reconstructed from the hyperspectral cube; the right half is a
+            false-colour spectral map, where colour encodes relative spectral response across the
+            measured bands. Warm and cool regions mark spectrally different material — not nutrient
+            concentration directly. Concentrations come from the calibrated models in the
+            <a href="#results">results</a> section.
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= RESULTS ================= -->
+  <section id="results">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Results</p>
+        <h2>Checked against the laboratory</h2>
+        <p class="lede">
+          Every model was validated against reference laboratory assays on the same samples.
+          Ten nutrient targets across yam, Irish potatoes, beans, chicken and beef.
+        </p>
+      </div>
+
+      <div class="card meter-card">
+        <h3>How closely the predictions match</h3>
+        <p class="small muted">
+          R² is the share of the variation in the laboratory values that the model explains.
+          1.0 is perfect agreement. Every target measured here sits above 0.89.
+        </p>
+        <ol class="meters" id="meters">
+          <li class="meter" style="--v:.995">
+            <span class="meter-name"><b>Irish potatoes</b><span>Carbohydrate</span></span>
+            <span class="meter-val">0.995</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+          <li class="meter" style="--v:.982">
+            <span class="meter-name"><b>Chicken</b><span>Protein (LightGBM)</span></span>
+            <span class="meter-val">0.982</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+          <li class="meter" style="--v:.969">
+            <span class="meter-name"><b>Cooked beans</b><span>Protein</span></span>
+            <span class="meter-val">0.969</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+          <li class="meter" style="--v:.9442">
+            <span class="meter-name"><b>Boiled yam</b><span>Potassium (K)</span></span>
+            <span class="meter-val">0.944</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+          <li class="meter" style="--v:.9418">
+            <span class="meter-name"><b>Boiled yam</b><span>Selenium (Se)</span></span>
+            <span class="meter-val">0.942</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+          <li class="meter" style="--v:.9341">
+            <span class="meter-name"><b>Boiled yam</b><span>Sodium (Na)</span></span>
+            <span class="meter-val">0.934</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+          <li class="meter" style="--v:.9301">
+            <span class="meter-name"><b>Boiled yam</b><span>Iron (Fe)</span></span>
+            <span class="meter-val">0.930</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+          <li class="meter" style="--v:.9113">
+            <span class="meter-name"><b>Beef</b><span>Vitamin B2 (riboflavin)</span></span>
+            <span class="meter-val">0.911</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+          <li class="meter" style="--v:.9085">
+            <span class="meter-name"><b>Boiled yam</b><span>Calcium (Ca)</span></span>
+            <span class="meter-val">0.909</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+          <li class="meter" style="--v:.8977">
+            <span class="meter-name"><b>Beef</b><span>Vitamin B1 (thiamine)</span></span>
+            <span class="meter-val">0.898</span>
+            <span class="meter-track"><span class="meter-fill"></span></span>
+          </li>
+        </ol>
+      </div>
+
+      <details class="more">
+        <summary>Full validation table <span class="more-hint">R², adj. R², RMSE, MAE</span></summary>
+        <div class="more-body">
+          <div class="table-scroll">
+            <table>
+              <caption>Validation statistics as reported in the project's figures</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Sample</th>
+                  <th scope="col">Nutrient target</th>
+                  <th scope="col" class="num">R²</th>
+                  <th scope="col" class="num">Adj. R²</th>
+                  <th scope="col" class="num">RMSE</th>
+                  <th scope="col" class="num">MAE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Irish potatoes</th><td>Carbohydrate</td><td class="num">0.995</td><td class="num">0.994</td><td class="num">0.0646</td><td class="num">0.0452</td></tr>
+                <tr><th scope="row">Chicken</th><td>Protein</td><td class="num">0.982</td><td class="num">0.980</td><td class="num">0.0598</td><td class="num">0.0396</td></tr>
+                <tr><th scope="row">Cooked beans</th><td>Protein</td><td class="num">0.969</td><td class="num">0.966</td><td class="num">0.1108</td><td class="num">0.0782</td></tr>
+                <tr><th scope="row">Boiled yam</th><td>Potassium (K)</td><td class="num">0.9442</td><td class="num">0.9410</td><td class="num">0.3794</td><td class="num">0.2955</td></tr>
+                <tr><th scope="row">Boiled yam</th><td>Selenium (Se)</td><td class="num">0.9418</td><td class="num">0.9384</td><td class="num">0.0221</td><td class="num">0.0171</td></tr>
+                <tr><th scope="row">Boiled yam</th><td>Sodium (Na)</td><td class="num">0.9341</td><td class="num">0.9303</td><td class="num">0.1954</td><td class="num">0.1598</td></tr>
+                <tr><th scope="row">Boiled yam</th><td>Iron (Fe)</td><td class="num">0.9301</td><td class="num">0.9260</td><td class="num">0.0363</td><td class="num">0.0289</td></tr>
+                <tr><th scope="row">Beef</th><td>Vitamin B2</td><td class="num">0.9113</td><td class="num">0.9028</td><td class="num">0.0350</td><td class="num">—</td></tr>
+                <tr><th scope="row">Boiled yam</th><td>Calcium (Ca)</td><td class="num">0.9085</td><td class="num">0.9032</td><td class="num">0.2317</td><td class="num">0.1804</td></tr>
+                <tr><th scope="row">Beef</th><td>Vitamin B1</td><td class="num">0.8977</td><td class="num">0.8879</td><td class="num">0.0223</td><td class="num">—</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-foot">
+            <b>RMSE</b> is the typical size of a prediction error, weighting large misses more heavily;
+            <b>MAE</b> is the average size, without that extra weight. <b>Adjusted R²</b> penalises
+            model complexity, so a model cannot score well simply by having more predictors.
+            RMSE and MAE carry the units of each assay — yam minerals in mg/kg, beef vitamins in
+            mg/100&nbsp;g — so they compare models <em>within</em> a target, not across targets.
+            “—” marks a statistic not reported in the source figure.
+          </p>
+        </div>
+      </details>
+
+      <details class="more">
+        <summary>Original result figures <span class="more-hint">6 plots</span></summary>
+        <div class="more-body">
+          <div class="figures">
+            <figure class="fig">
+              <button class="zoomable" data-full="assets/img/figures/potato-carbohydrate.png" data-caption="3D spatial–spectral mapping profile: Irish potato carbohydrate landscape. R² 0.995, adjusted R² 0.994, RMSE 0.0646, MAE 0.0452.">
+                <img src="assets/img/figures/potato-carbohydrate.png" loading="lazy" alt="Three-dimensional scatter plot of measured versus predicted Irish potato carbohydrate content against calibrated sensor wavelength, coloured by absolute error magnitude.">
+              </button>
+              <figcaption><b>Irish potato carbohydrate</b>3D spatial–spectral mapping across 400–1000&nbsp;nm.</figcaption>
+            </figure>
+
+            <figure class="fig">
+              <button class="zoomable" data-full="assets/img/figures/beans-protein.png" data-caption="3D chemometric mapping profile: cooked beans protein landscape. R² 0.969, adjusted R² 0.966, RMSE 0.1108, MAE 0.0782.">
+                <img src="assets/img/figures/beans-protein.png" loading="lazy" alt="Three-dimensional scatter plot of measured versus predicted cooked beans protein content against spectral signature variance.">
+              </button>
+              <figcaption><b>Cooked beans protein</b>Chemometric mapping with spectral signature variance.</figcaption>
+            </figure>
+
+            <figure class="fig">
+              <button class="zoomable" data-full="assets/img/figures/chicken-protein.png" data-caption="3D chemometric mapping profile: chicken protein prediction landscape using LightGBM. R² 0.982, adjusted R² 0.980, RMSE 0.0598, MAE 0.0396.">
+                <img src="assets/img/figures/chicken-protein.png" loading="lazy" alt="Three-dimensional scatter plot of measured versus LightGBM-predicted chicken protein content.">
+              </button>
+              <figcaption><b>Chicken protein</b>Gradient-boosted (LightGBM) prediction landscape.</figcaption>
+            </figure>
+
+            <figure class="fig">
+              <button class="zoomable" data-full="assets/img/figures/yam-minerals.png" data-caption="VIS–NIR mineral quantification profiles for boiled yam: predicted versus actual lab assays for Na, K, Fe, Ca and Se across 400–1000 nm.">
+                <img src="assets/img/figures/yam-minerals.png" loading="lazy" alt="Five stacked line charts comparing actual laboratory assay and VIS–NIR model prediction of sodium, potassium, iron, calcium and selenium concentration in boiled yam across sensor wavelength.">
+              </button>
+              <figcaption><b>Boiled yam minerals</b>Na, K, Fe, Ca and Se across the VIS–NIR range.</figcaption>
+            </figure>
+
+            <figure class="fig">
+              <button class="zoomable" data-full="assets/img/figures/beef-thiamine.png" data-caption="Vitamin B1 (thiamine) correlation parity for beef. R² 0.8977, adjusted R² 0.8879, RMSE 0.0223.">
+                <img src="assets/img/figures/beef-thiamine.png" loading="lazy" alt="Scatter plot of beef thiamine laboratory reference value against VIS–NIR predicted value, with a perfect-fit reference line.">
+              </button>
+              <figcaption><b>Beef vitamin B1</b>Thiamine correlation parity against the perfect-fit line.</figcaption>
+            </figure>
+
+            <figure class="fig">
+              <button class="zoomable" data-full="assets/img/figures/beef-riboflavin.png" data-caption="Vitamin B2 (riboflavin) correlation parity for beef. R² 0.9113, adjusted R² 0.9028, RMSE 0.0350.">
+                <img src="assets/img/figures/beef-riboflavin.png" loading="lazy" alt="Scatter plot of beef riboflavin laboratory reference value against VIS–NIR predicted value, with a perfect-fit reference line.">
+              </button>
+              <figcaption><b>Beef vitamin B2</b>Riboflavin correlation parity against the perfect-fit line.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= USES ================= -->
+  <section id="uses">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Uses</p>
+        <h2>Where a non-destructive reading is useful</h2>
+        <p class="lede">
+          Because the sample survives the measurement, the same reading can be taken on items still
+          going to be sold, planted, cooked or exported — and on many of them.
+        </p>
+      </div>
+
+      <div class="apps">
+        <div class="card app">
+          <h3>Post-harvest grading</h3>
+          <p>Sorting tubers and grains by composition rather than size or appearance, without cutting into the produce being graded.</p>
+        </div>
+        <div class="card app">
+          <h3>Quality assurance &amp; labelling</h3>
+          <p>Verifying declared nutrient content on packaged foods as a rapid screen ahead of confirmatory laboratory tests.</p>
+        </div>
+        <div class="card app">
+          <h3>Biofortification screening</h3>
+          <p>Screening breeding lines for mineral density while keeping the seed or tuber viable for the next generation.</p>
+        </div>
+        <div class="card app">
+          <h3>Cooked-food assessment</h3>
+          <p>Measuring what remains after boiling, frying or cooking — as shown here on jollof rice, fried plantain and boiled yam.</p>
+        </div>
+        <div class="card app">
+          <h3>Process monitoring</h3>
+          <p>Repeatability from the sealed cabinet and motorised stage makes it practical to track composition through a production run.</p>
+        </div>
+        <div class="card app">
+          <h3>Research &amp; teaching</h3>
+          <p>A contained platform for chemometrics, spectral calibration and machine-learning coursework.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2>About the inventor</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card contact-card">
+          <p class="contact-name">Abdulwahab Durojaiye Ismail</p>
+          <p class="contact-role">Inventor · Agricultural and Bioresources Engineering</p>
+          <ul class="contact-lines">
+            <li>Faculty of Engineering and Engineering Technology</li>
+            <li>Abubakar Tafawa Balewa University</li>
+            <li>P.M.B. 0248, Yelwa Campus</li>
+            <li>Bauchi State, Nigeria</li>
+          </ul>
+          <div class="contact-links">
+            <a class="btn btn-primary" href="mailto:adismail@atbu.edu.ng">Email the inventor</a>
+            <a class="btn btn-ghost" href="tel:+2348060434467">0806 043 4467</a>
+          </div>
+        </div>
+
+        <div class="crest-card">
+          <img src="assets/img/atbu-crest.png" width="116" height="122"
+               alt="Crest of Abubakar Tafawa Balewa University, Bauchi.">
+          <b>Abubakar Tafawa Balewa University</b>
+          <span>Bauchi State, Nigeria</span>
+          <span class="crest-motto">Doctrina Mater Artium</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>
+      <strong>Hyperspectral Imaging (HSI) System for Non-destructive Evaluation of Nutrients in Food
+      and Agricultural Products.</strong><br>
+      Presented at the 2026 TETFund National Research Fair / Exhibition.
+    </p>
+    <p>
+      Abdulwahab Durojaiye Ismail<br>
+      Abubakar Tafawa Balewa University, Bauchi.
+    </p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close enlarged image">✕</button>
+  <div class="lightbox-inner">
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-cap" id="lightboxCap"></p>
+    <a class="lightbox-open" id="lightboxOpen" href="" target="_blank" rel="noopener">Open full size ↗</a>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
