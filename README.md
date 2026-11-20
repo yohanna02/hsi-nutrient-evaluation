@@ -60,6 +60,9 @@ mobile-first and the reading path is short:
   a letterbox. It is `preload="none"`, so the 7.5 MB is only fetched when someone
   actually plays it, and it pauses itself when scrolled out of view or when another
   tab is opened.
+- **The hero image ships in WebP with a PNG fallback.** A phone fetches the
+  42 KB version, a large screen the 62 KB one; the full 1080-wide PNG is only
+  downloaded when someone taps it open.
 
 ## What's in it
 
@@ -71,6 +74,7 @@ mobile-first and the reading path is short:
 | `assets/img/` | University crest, cabinet renderings |
 | `assets/img/samples/` | 8 RGB photographs paired with their hyperspectral scan strips |
 | `assets/img/figures/` | 6 validation figures from the project |
+| `assets/img/cabinet-annotated.*` | The hero image, in WebP (760w and 1080w) and PNG (760w and 1080w) |
 | `assets/video/` | The instrument walkthrough (MP4) and its poster frame |
 
 Total weight is about 10 MB, of which 7.5 MB is the video. Everything else is
@@ -131,6 +135,10 @@ Selection tab — were read off the screen in the video and are described as sho
 - **The muted text colour** (`--ink-3`) is `#666e6a` in light mode, the lightest
   grey that still clears 4.5:1 against the card, paper and sunken backgrounds.
   Going lighter breaks contrast — re-check it if you adjust it.
+- **Images must keep their proportions.** The global `img` rule sets
+  `height: auto`; without it the HTML `width`/`height` attributes act as a fixed
+  height and stretch the picture. If you add an image, give it both attributes
+  for layout stability and let the CSS do the sizing.
 - **Replacing the video:** drop the new file in `assets/video/`, update the
   `<source>` in `index.html`, and regenerate the poster with
   `ffmpeg -ss 3 -i new.mp4 -frames:v 1 -q:v 3 poster.jpg`. Keep it portrait

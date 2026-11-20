@@ -67,8 +67,16 @@
       <figure class="hero-figure">
         <button class="zoomable" data-full="assets/img/cabinet-annotated.png"
                 data-caption="The HSI cabinet with its door open, showing the internal arrangement of the camera, illumination, motion stage and control hardware.">
-          <img src="assets/img/cabinet-annotated.png" width="661" height="422"
-               alt="Labelled cut-away rendering of the hyperspectral imaging cabinet, showing the hyperspectral camera, light sources, stepper motor, linear transitional stage, moveable platform, power pack, LCD calibration panel and pattress box.">
+          <picture>
+            <source type="image/webp"
+                    srcset="assets/img/cabinet-annotated-760.webp 760w, assets/img/cabinet-annotated.webp 1080w"
+                    sizes="(min-width: 900px) 620px, calc(100vw - 3rem)">
+            <img src="assets/img/cabinet-annotated.png"
+                 srcset="assets/img/cabinet-annotated-760.png 760w, assets/img/cabinet-annotated.png 1080w"
+                 sizes="(min-width: 900px) 620px, calc(100vw - 3rem)"
+                 width="1080" height="824"
+                 alt="Labelled cut-away rendering of the hyperspectral imaging cabinet, showing the hyperspectral camera, light sources, stepper motor, linear transitional stage, moveable platform, power pack, LCD calibration panel and pattress box.">
+          </picture>
         </button>
         <figcaption>The instrument, with its parts labelled. Tap to enlarge.</figcaption>
       </figure>

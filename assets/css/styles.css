@@ -95,7 +95,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+/* height:auto stops the HTML width/height attributes from acting as a fixed
+   height and stretching the image. */
+img { max-width: 100%; height: auto; display: block; }
 
 a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 a:hover { color: var(--accent); }
@@ -380,6 +382,7 @@ section + section { border-top: 1px solid var(--line-soft); }
   background: transparent; border: 0; font: inherit; color: inherit;
   cursor: zoom-in; border-radius: var(--radius-sm);
 }
+.zoomable picture { display: block; }
 .zoomable img { width: 100%; border-radius: var(--radius-sm); }
 
 .parts { list-style: none; margin: 0; padding: 0; }
