@@ -1,5 +1,7 @@
 # HSI Nutrient Evaluation — project website
 
+**Live site:** https://yohanna02.github.io/hsi-nutrient-evaluation/
+
 A single-page site describing the invention
 **"Hyperspectral Imaging (HSI) System for Non-destructive Evaluation of Nutrients in
 Food and Agricultural Products"**, presented at the **2026 TETFund National Research
@@ -15,7 +17,11 @@ Bauchi State, Nigeria.
 
 ## Running it
 
-There is no build step and no dependency to install. Open the file:
+There is no build step and no dependency to install. The live copy is published
+with GitHub Pages from the `main` branch — push to `main` and the site updates
+within a minute.
+
+To run it locally:
 
 ```
 open index.html          # macOS
@@ -29,7 +35,7 @@ python3 -m http.server 8080
 # then visit http://localhost:8080
 ```
 
-To publish, upload the whole folder to any static host — GitHub Pages, Netlify,
+To publish elsewhere, upload the whole folder to any static host — Netlify,
 Cloudflare Pages, or a university web server. Nothing needs configuring.
 
 **It works fully offline.** No web fonts, no CDN, no analytics, no framework — every
